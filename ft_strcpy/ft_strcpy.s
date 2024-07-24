@@ -5,13 +5,16 @@
 section .text
     global ft_strcpy
 ft_strcpy:
-.copy_loop:
+    xor rax, rax
+    push rdi
+copy_loop:
     mov al, [rsi]
     mov [rdi], al 
     cmp al, 0
-    je .copy_exit
+    je  copy_exit
     inc rdi
     inc rsi
-    jmp .copy_loop
-.copy_exit:
+    jmp copy_loop
+copy_exit:
+    pop rax
     ret
