@@ -1,3 +1,5 @@
+// https://adonis0147.github.io/post/hello_x86_64_assembly/
+
 #include <stdio.h>
 #include <unistd.h>
 #include <string.h>

@@ -1,8 +1,8 @@
 NAME = libasm
 NAMELIB = libasm.a
 
-CC = cc
-CFLAGS = -g -Wall -Wextra -Werror -no-pie
+CC = gcc
+CFLAGS = -g -Wall -Wextra -Werror -fPIC
 
 NASM = nasm -g -F dwarf -f elf64
 RM = rm -f

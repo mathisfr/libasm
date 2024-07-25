@@ -14,7 +14,7 @@ ft_strdup:
     add rax, 1
     push rdi
     mov rdi, rax
-    call malloc
+    call malloc wrt ..plt
     test rax, rax
     jz dup_error
     pop rsi
@@ -24,7 +24,7 @@ ft_strdup:
 dup_error:
     neg rax
     push rax
-    call __errno_location
+    call __errno_location wrt ..plt
     pop qword [rax]
     mov rax, 0
     ret
